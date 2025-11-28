@@ -18,7 +18,7 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copia os arquivos buildados para a pasta pública do Nginx
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Opcional: adicionar configuração para SPA
+# Copia nova config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
